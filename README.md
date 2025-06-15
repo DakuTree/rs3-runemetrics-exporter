@@ -29,12 +29,3 @@ For more complicated configurations, please ask elsewhere 👍.
 RuneMetrics provides the activity log in two different forms:
 - Text: `I killed 5 Gate of Elidinis.`
 - Details: `I killed 5 Gates of Elidinis: sacred and powerful parts of the underworld, possessed by corruption.`
-
-
-RUNESCAPE_USERNAME     = os.environ.get('RUNESCAPE_USERNAME', '')
-RSRME_ACTIVITIES       = os.environ.get('RSRME_ACTIVITIES', 20) # 20 is max?
-RSRME_LOG_TYPE         = os.environ.get('RSRME_LOG_TYPE', 'text') # text or details
-RSRME_INTERVAL_MINUTES = int(os.environ.get('RSRME_INTERVAL_MINUTES', 30))
-
-PROMETHEUS_PORT    = int(os.environ.get('PROMETHEUS_PORT', 8080))
-LOKI_URL           = os.environ.get('LOKI_URL', 'http://loki:3100')
