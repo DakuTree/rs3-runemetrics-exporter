@@ -115,13 +115,14 @@ class App():
                 str(int(datetime.strptime(activity['date'], "%d-%b-%Y %H:%M").timestamp() * 1_000_000_000)),
                 activity[RSRME_LOG_TYPE]
             ])
+        logs.reverse()
         self.sendToLoki(logs)
         # #endregion Send Activities to Loki
 
     def sendToLoki(self, logs) -> None:
         payload = {
             'streams': [{
-                'stream': { 'job':  'runescape3', 'username': RUNESCAPE_USERNAME},
+                'stream': { 'job':  'runescape3_activities', 'username': RUNESCAPE_USERNAME},
                 'values': logs
             }]
         }

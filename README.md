@@ -9,7 +9,7 @@ Example config:
 ```yaml
 services:
   rs3runemetricsexporter:
-    image: daku/rs3runemetricsexporter:v1.0
+    image: daku/rs3runemetricsexporter:v1.2
 
     environment:
       RUNESCAPE_USERNAME: ''
